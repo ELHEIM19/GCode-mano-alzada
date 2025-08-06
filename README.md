@@ -42,18 +42,33 @@ pip install opencv-python numpy
 
 ## 💻 Uso
 
-### 🎯 Método 1: Script Interactivo (Windows)
+### 🎯 Método 1: Interfaz Gráfica (Recomendado)
+```bash
+run_gui.bat
+```
+Interfaz gráfica intuitiva con explorador de archivos integrado:
+- Buscar imágenes con el explorador de Windows
+- Configurar todos los parámetros visualmente
+- Ver el progreso en tiempo real
+- Validación automática de archivos
+
+Para ejecutar directamente:
+```bash
+python gui_generator.py
+```
+
+### 🖥️ Método 2: Script Interactivo (Windows)
 ```bash
 run_generator.bat
 ```
 Interfaz con menú que te guía paso a paso.
 
-### 🔧 Método 2: Generador Avanzado
+### 🔧 Método 3: Generador Avanzado
 ```bash
 python advanced_generator.py imagen.jpg
 ```
 
-### ⚡ Método 3: Script Básico
+### ⚡ Método 4: Script Básico
 ```bash
 python image_to_gcode.py imagen.jpg
 ```
