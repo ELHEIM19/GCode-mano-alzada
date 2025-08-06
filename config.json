@@ -1,0 +1,124 @@
+{
+  "default_settings": {
+    "canvas_width": 200.0,
+    "canvas_height": 200.0,
+    "z_safe": 5.0,
+    "z_draw_base": 0.2,
+    "travel_speed": 3000,
+    "machine_type": "grbl",
+    "profile": "artistic"
+  },
+  
+  "machine_specific": {
+    "grbl": {
+      "z_safe": 5.0,
+      "z_draw_base": 0.2,
+      "travel_speed": 3000,
+      "feed_rate": 1000
+    },
+    "marlin": {
+      "z_safe": 10.0,
+      "z_draw_base": 0.0,
+      "travel_speed": 4000,
+      "feed_rate": 1500
+    },
+    "plotter": {
+      "z_safe": 2.0,
+      "z_draw_base": 0.0,
+      "travel_speed": 2000,
+      "feed_rate": 800
+    },
+    "laser": {
+      "z_safe": 0.0,
+      "z_draw_base": 0.0,
+      "travel_speed": 5000,
+      "feed_rate": 1200
+    }
+  },
+  
+  "drawing_profiles": {
+    "artistic": {
+      "description": "Trazo artístico expresivo",
+      "z_variation": 1.5,
+      "feed_rate": 800,
+      "tremor_amplitude": 0.15,
+      "pressure_variation": 0.4,
+      "speed_variation": 0.3
+    },
+    "technical": {
+      "description": "Trazo técnico preciso",
+      "z_variation": 0.3,
+      "feed_rate": 1200,
+      "tremor_amplitude": 0.05,
+      "pressure_variation": 0.1,
+      "speed_variation": 0.1
+    },
+    "sketch": {
+      "description": "Boceto rápido",
+      "z_variation": 0.8,
+      "feed_rate": 1500,
+      "tremor_amplitude": 0.2,
+      "pressure_variation": 0.35,
+      "speed_variation": 0.25
+    },
+    "calligraphy": {
+      "description": "Estilo caligráfico",
+      "z_variation": 1.0,
+      "feed_rate": 600,
+      "tremor_amplitude": 0.08,
+      "pressure_variation": 0.5,
+      "speed_variation": 0.2
+    },
+    "engraving": {
+      "description": "Grabado controlado",
+      "z_variation": 0.2,
+      "feed_rate": 400,
+      "tremor_amplitude": 0.03,
+      "pressure_variation": 0.05,
+      "speed_variation": 0.05
+    }
+  },
+  
+  "material_presets": {
+    "wood_soft": {
+      "z_base": 0.3,
+      "z_variation": 1.0,
+      "feed_rate": 800
+    },
+    "wood_hard": {
+      "z_base": 0.2,
+      "z_variation": 0.5,
+      "feed_rate": 600
+    },
+    "acrylic": {
+      "z_base": 0.1,
+      "z_variation": 0.3,
+      "feed_rate": 1000
+    },
+    "aluminum": {
+      "z_base": 0.05,
+      "z_variation": 0.1,
+      "feed_rate": 400
+    },
+    "paper": {
+      "z_base": 0.0,
+      "z_variation": 0.2,
+      "feed_rate": 1200
+    }
+  },
+  
+  "image_processing": {
+    "default_blur": 5,
+    "canny_low": 50,
+    "canny_high": 150,
+    "min_contour_area": 50,
+    "contour_approximation": 0.005
+  },
+  
+  "safety": {
+    "max_z_safe": 20.0,
+    "min_z_base": -2.0,
+    "max_feed_rate": 10000,
+    "max_travel_speed": 15000
+  }
+}

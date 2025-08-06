@@ -1,0 +1,141 @@
+# INSTRUCCIONES DE INSTALACIÓN Y USO
+# Generador de G-code para Trazos a Mano Alzada
+
+## INSTALACIÓN AUTOMÁTICA (Windows)
+
+1. Ejecuta: run_generator.bat
+2. El script instalará automáticamente todas las dependencias
+3. Sigue el menú interactivo
+
+## INSTALACIÓN MANUAL
+
+### Paso 1: Instalar Python
+- Descarga Python desde: https://python.org
+- Durante la instalación, marca "Add Python to PATH"
+
+### Paso 2: Instalar dependencias
+Abre PowerShell o CMD y ejecuta:
+
+pip install opencv-python numpy
+
+### Paso 3: Probar instalación
+python test_installation.py
+
+## USO RÁPIDO
+
+### Opción 1: Interfaz Gráfica (Más Fácil)
+run_generator.bat
+
+### Opción 2: Línea de Comandos (Más Flexible)
+# Uso básico
+python advanced_generator.py mi_imagen.jpg
+
+# Con configuraciones específicas
+python advanced_generator.py mi_imagen.jpg --machine grbl --profile artistic --width 200
+
+### Opción 3: Script Simple
+python image_to_gcode.py mi_imagen.jpg
+
+## EJEMPLOS PRÁCTICOS
+
+### Para CNC con Grbl
+python advanced_generator.py logo.png --machine grbl --profile technical
+
+### Para Impresora 3D (con pluma)
+python advanced_generator.py dibujo.jpg --machine marlin --profile sketch
+
+### Para Plotter
+python advanced_generator.py arte.png --machine plotter --profile calligraphy
+
+### Para Láser (grabado)
+python advanced_generator.py texto.jpg --machine laser --profile engraving
+
+## TIPOS DE IMAGEN RECOMENDADOS
+
+✅ Buenos:
+- Dibujos con líneas claras
+- Logos simples
+- Texto grande
+- Contornos definidos
+
+❌ Evitar:
+- Fotos con mucho detalle
+- Imágenes muy pixeladas
+- Fondos complejos
+
+## CONFIGURACIÓN BÁSICA DE MÁQUINAS
+
+### CNC Router / Fresadora
+- Usar fresa de grabado pequeña (1-3mm)
+- Ajustar z_base según profundidad deseada
+- Velocidades moderadas para acabado suave
+
+### Impresora 3D (modo dibujo)
+- Reemplazar hotend por porta-pluma
+- Configurar temperaturas en 0°C
+- Usar plumas/marcadores apropiados
+
+### Plotter
+- Verificar presión de pluma
+- Ajustar alturas según grosor de papel
+- Velocidades bajas para mejor calidad
+
+### Grabadora Láser
+- ⚠️ SIEMPRE usar protección ocular
+- Configurar potencia según material
+- Hacer pruebas en material de desecho
+
+## SOLUCIÓN DE PROBLEMAS
+
+### "Python no reconocido"
+- Reinstalar Python marcando "Add to PATH"
+- Reiniciar terminal/PowerShell
+
+### "pip no reconocido"
+- Python no instalado correctamente
+- Usar: python -m pip install ...
+
+### "No se detectan contornos"
+- Imagen con poco contraste
+- Probar con imagen más simple
+- Ajustar parámetros de detección
+
+### G-code muy complejo
+- Reducir resolución de imagen
+- Usar perfil "technical" para menos variación
+- Simplificar la imagen original
+
+### Velocidades incorrectas
+- Verificar capacidades de tu máquina
+- Ajustar feed_rate y travel_speed
+- Hacer pruebas con material barato
+
+## ARCHIVOS INCLUIDOS
+
+📄 Scripts principales:
+- image_to_gcode.py       (Generador básico)
+- advanced_generator.py   (Generador avanzado con perfiles)
+- example_usage.py        (Ejemplos simples)
+
+📄 Configuración:
+- machine_configs.py      (Configuraciones de máquinas)
+- config.json            (Configuración personalizable)
+
+📄 Utilidades:
+- run_generator.bat      (Interfaz Windows)
+- test_installation.py   (Prueba de instalación)
+- requirements.txt       (Dependencias)
+
+📄 Documentación:
+- README.md              (Documentación completa)
+- INSTALL.txt            (Este archivo)
+
+## CONTACTO Y SOPORTE
+
+Si encuentras problemas:
+1. Ejecuta test_installation.py para diagnosticar
+2. Verifica que tu imagen tenga contornos claros
+3. Prueba con diferentes perfiles y configuraciones
+4. Revisa la documentación en README.md
+
+¡Disfruta creando G-code con efectos naturales a mano alzada!
