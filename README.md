@@ -73,6 +73,23 @@ python advanced_generator.py imagen.jpg
 python image_to_gcode.py imagen.jpg
 ```
 
+## 💻 Uso versión simple (rama simple_gcode)
+
+### 🖱️ Interfaz Gráfica Simple
+```bash
+run_simple_gui.bat
+```
+- Genera G-code sin variaciones aleatorias
+- Solo movimientos XY y Z fijos (alza y baja el lápiz)
+- Ideal para pruebas, trazos técnicos o máquinas que no requieren simulación manual
+
+### 🖥️ Script Simple por consola
+```bash
+python simple_image_to_gcode.py imagen.jpg
+```
+- Genera el archivo G-code con parámetros básicos
+- Sin temblor ni presión simulada
+
 ## 🛠️ Ejemplos de Uso Detallados
 
 ### Para CNC Router (Grbl)
